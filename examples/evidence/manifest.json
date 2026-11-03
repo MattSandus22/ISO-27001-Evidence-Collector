@@ -1,0 +1,18 @@
+[
+  {
+    "file": "aws-20261103T150500Z.json",
+    "sha256": "b6a1ccb7ecf46e5de64065734564c82f4064f73cd6f4ea76f0b961a90c32a0da",
+    "source": "aws",
+    "scope": "aws:111122223333",
+    "collected_at": "2026-11-03T15:05:00+00:00",
+    "tool_version": "0.1.0"
+  },
+  {
+    "file": "github-20261103T150000Z.json",
+    "sha256": "85c313bab9cb605fc8cf9e0fca588e142ad8d232ef8a580a0d7532b4907b80e1",
+    "source": "github",
+    "scope": "org:acme-demo",
+    "collected_at": "2026-11-03T15:00:00+00:00",
+    "tool_version": "0.1.0"
+  }
+]

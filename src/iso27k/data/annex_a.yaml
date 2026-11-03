@@ -1,0 +1,19 @@
+# ISO/IEC 27001:2022 Annex A controls covered by automated checks in this tool.
+# Only controls with at least one technical check are listed. Organizational,
+# people and physical controls require manual evidence and are out of scope.
+controls:
+  "5.15": { title: "Access control", theme: "Organizational" }
+  "5.17": { title: "Authentication information", theme: "Organizational" }
+  "5.18": { title: "Access rights", theme: "Organizational" }
+  "8.2":  { title: "Privileged access rights", theme: "Technological" }
+  "8.3":  { title: "Information access restriction", theme: "Technological" }
+  "8.4":  { title: "Access to source code", theme: "Technological" }
+  "8.5":  { title: "Secure authentication", theme: "Technological" }
+  "8.8":  { title: "Management of technical vulnerabilities", theme: "Technological" }
+  "8.15": { title: "Logging", theme: "Technological" }
+  "8.16": { title: "Monitoring activities", theme: "Technological" }
+  "8.20": { title: "Networks security", theme: "Technological" }
+  "8.24": { title: "Use of cryptography", theme: "Technological" }
+  "8.25": { title: "Secure development life cycle", theme: "Technological" }
+  "8.28": { title: "Secure coding", theme: "Technological" }
+  "8.32": { title: "Change management", theme: "Technological" }

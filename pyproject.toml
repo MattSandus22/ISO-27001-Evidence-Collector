@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iso27k-evidence"
+version = "0.1.0"
+description = "Collect technical evidence from GitHub and AWS, map it to ISO/IEC 27001:2022 Annex A controls, and produce auditor-friendly gap reports."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Matt Sandus" }]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "PyYAML>=6.0",
+]
+keywords = ["iso27001", "grc", "compliance", "audit", "evidence", "security"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+]
+
+[project.optional-dependencies]
+aws = ["boto3>=1.28"]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+iso27k = "iso27k.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+iso27k = ["data/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

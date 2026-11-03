@@ -1,0 +1,16 @@
+control_id,title,theme,status,checks,failing_checks,remediation
+5.15,Access control,Organizational,Gap identified,GH-003,GH-003,Organization settings > Member privileges > Base permissions: set to Read or No permission.
+5.17,Authentication information,Organizational,Gap identified,AWS-003;AWS-004;GH-001;GH-007,AWS-003;AWS-004;GH-007,IAM > Account settings > set minimum password length to 14 or more. | Rotate or delete stale keys; prefer IAM roles and short-lived credentials. | Repository settings > Code security > enable Secret scanning (and push protection).
+5.18,Access rights,Organizational,Gap identified,AWS-004;GH-003,AWS-004;GH-003,Rotate or delete stale keys; prefer IAM roles and short-lived credentials. | Organization settings > Member privileges > Base permissions: set to Read or No permission.
+8.2,Privileged access rights,Technological,Evidence supports,AWS-001;GH-002,,
+8.3,Information access restriction,Technological,Gap identified,AWS-007,AWS-007,"Turn on all four Block Public Access settings at the account level, or per bucket."
+8.4,Access to source code,Technological,Gap identified,GH-004,GH-004,Add a branch protection rule or repository ruleset targeting the default branch.
+8.5,Secure authentication,Technological,Gap identified,AWS-001;AWS-002;GH-001,AWS-002,"Enforce MFA for console users, or move human access to IAM Identity Center with MFA."
+8.8,Management of technical vulnerabilities,Technological,Gap identified,GH-008,GH-008,Repository settings > Code security > enable Dependabot alerts.
+8.15,Logging,Technological,Evidence supports,AWS-005;AWS-006,,
+8.16,Monitoring activities,Technological,Evidence supports,AWS-010,,
+8.20,Networks security,Technological,Gap identified,AWS-009,AWS-009,Restrict ports 22/3389 to known CIDRs or use SSM Session Manager instead of open admin ports.
+8.24,Use of cryptography,Technological,Gap identified,AWS-008,AWS-008,EC2 > Settings > Data protection and security > enable 'Always encrypt new EBS volumes' in each region.
+8.25,Secure development life cycle,Technological,Gap identified,GH-005,GH-005,Require at least one approving review in the branch protection rule or ruleset.
+8.28,Secure coding,Technological,Gap identified,GH-007,GH-007,Repository settings > Code security > enable Secret scanning (and push protection).
+8.32,Change management,Technological,Gap identified,GH-004;GH-005;GH-006,GH-004;GH-005;GH-006,Add a branch protection rule or repository ruleset targeting the default branch. | Require at least one approving review in the branch protection rule or ruleset. | Disable 'Allow force pushes' or add a 'Block force pushes' ruleset rule.

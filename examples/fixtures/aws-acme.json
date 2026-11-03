@@ -1,0 +1,53 @@
+{
+  "source": "aws",
+  "collected_at": "2026-11-03T15:05:00+00:00",
+  "scope": "aws:111122223333",
+  "account_id": "111122223333",
+  "regions": ["us-east-1", "us-west-2"],
+  "iam": {
+    "account_summary": {"AccountMFAEnabled": 1},
+    "password_policy": {"MinimumPasswordLength": 8, "RequireSymbols": true},
+    "users": [
+      {"name": "jdoe", "console_access": true, "mfa_enabled": true, "access_keys": []},
+      {"name": "contractor-temp", "console_access": true, "mfa_enabled": false, "access_keys": []},
+      {"name": "ci-deploy", "console_access": false, "mfa_enabled": false,
+       "access_keys": [{"id": "****Q7XA", "status": "Active", "age_days": 214}]},
+      {"name": "backup-bot", "console_access": false, "mfa_enabled": false,
+       "access_keys": [{"id": "****M2LP", "status": "Active", "age_days": 31},
+                       {"id": "****K9ZZ", "status": "Inactive", "age_days": 400}]}
+    ]
+  },
+  "cloudtrail": {
+    "trails": [
+      {"name": "org-trail", "is_multi_region": true, "is_logging": true, "log_file_validation": true}
+    ]
+  },
+  "s3": {
+    "account_public_access_block": null,
+    "buckets": [
+      {"name": "acme-app-uploads",
+       "public_access_block": {"BlockPublicAcls": true, "IgnorePublicAcls": true, "BlockPublicPolicy": true, "RestrictPublicBuckets": true}},
+      {"name": "acme-marketing-site",
+       "public_access_block": {"BlockPublicAcls": true, "IgnorePublicAcls": true, "BlockPublicPolicy": false, "RestrictPublicBuckets": false}}
+    ]
+  },
+  "ec2": {
+    "us-east-1": {
+      "ebs_default_encryption": true,
+      "security_groups": [
+        {"id": "sg-0a1b2c3d", "name": "web-alb", "world_ingress": [{"protocol": "tcp", "from_port": 443, "to_port": 443}]},
+        {"id": "sg-0e4f5a6b", "name": "bastion", "world_ingress": [{"protocol": "tcp", "from_port": 22, "to_port": 22}]}
+      ]
+    },
+    "us-west-2": {
+      "ebs_default_encryption": false,
+      "security_groups": [
+        {"id": "sg-07c8d9e0", "name": "default", "world_ingress": []}
+      ]
+    }
+  },
+  "guardduty": {
+    "us-east-1": {"enabled": true, "detector_count": 1},
+    "us-west-2": {"enabled": true, "detector_count": 1}
+  }
+}

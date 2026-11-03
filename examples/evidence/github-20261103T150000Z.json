@@ -1,0 +1,84 @@
+{
+  "admins": [
+    "alice",
+    "bob"
+  ],
+  "collected_at": "2026-11-03T15:00:00+00:00",
+  "org": {
+    "default_repository_permission": "write",
+    "login": "acme-demo",
+    "two_factor_requirement_enabled": true
+  },
+  "repos": [
+    {
+      "archived": false,
+      "branch_protection": {
+        "allow_force_pushes": false,
+        "enabled": true,
+        "required_approving_review_count": 2,
+        "sources": [
+          "ruleset"
+        ]
+      },
+      "default_branch": "main",
+      "full_name": "acme-demo/payments-api",
+      "private": true,
+      "security": {
+        "dependabot_alerts": true,
+        "secret_scanning": "enabled"
+      }
+    },
+    {
+      "archived": false,
+      "branch_protection": {
+        "allow_force_pushes": false,
+        "enabled": true,
+        "required_approving_review_count": 0,
+        "sources": [
+          "branch_protection"
+        ]
+      },
+      "default_branch": "main",
+      "full_name": "acme-demo/web-frontend",
+      "private": true,
+      "security": {
+        "dependabot_alerts": false,
+        "secret_scanning": "enabled"
+      }
+    },
+    {
+      "archived": false,
+      "branch_protection": {
+        "allow_force_pushes": true,
+        "enabled": false,
+        "required_approving_review_count": 0,
+        "sources": []
+      },
+      "default_branch": "master",
+      "full_name": "acme-demo/infra-scripts",
+      "private": true,
+      "security": {
+        "dependabot_alerts": true,
+        "secret_scanning": "disabled"
+      }
+    },
+    {
+      "archived": true,
+      "branch_protection": {
+        "allow_force_pushes": true,
+        "enabled": false,
+        "required_approving_review_count": 0,
+        "sources": []
+      },
+      "default_branch": "master",
+      "full_name": "acme-demo/legacy-portal",
+      "private": true,
+      "security": {
+        "dependabot_alerts": false,
+        "secret_scanning": "disabled"
+      }
+    }
+  ],
+  "scope": "org:acme-demo",
+  "source": "github"
+}
